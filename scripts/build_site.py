@@ -79,7 +79,7 @@ def page_station(d):
 {info}
 {near_t}
 <p class="note">{NOTE}</p>
-{chips([(d['route'] + ' 주유소', '/highway/route/%s/' % ROUTE_SLUG[d['route']]), (d['bname'] + ' 주유소', '/brand/%s/' % d['brand']), ('휘발유 저렴한 순', '/rank/gasoline/'), ('고속도로 주유소 전체', '/highway/')])}
+{chips([(d['route'] + ' 주유소', '/highway/route/%s/' % ROUTE_SLUG[d['route']]), (d['bname'] + ' 주유소', '/brand/%s/' % d['brand']), ('🚗 내 차 연비·연료비 비교', 'https://wooayeonbi.wooahouse.com/rank/'), ('휘발유 저렴한 순', '/rank/gasoline/'), ('고속도로 주유소 전체', '/highway/')])}
 """
     faq = [("%s 휘발유 가격은 얼마인가요?" % d["name"], "%s 기준 %s입니다(고속도로 주유소 평균 %s)." % (ASOF_D, won(d["gas"]), won(AVG["gas"]))), ("%s 전화번호는?" % d["name"], d["tel"] or "공개된 전화번호가 없습니다."),
            ("고속도로 주유소 기름값은 매일 바뀌나요?", "가격은 수시로 바뀌며 이 사이트는 하루 한 번 한국도로공사 자료를 받아 갱신합니다.")]
